@@ -1,3 +1,13 @@
+I'm still experimenting with this config and it's in a very early stage. I will be constantly updating it as my needs in software development grow and change.
+
+# Dependencies
+For optimal functioning of all the plugins, you need these installed:
+- Python
+- Flake8 (Python linter)
+- GCC
+- G++
+
+# Installation
 Commands to copy this config to your neovim folder:
 
 Windows:
