@@ -37,5 +37,7 @@ return {
     end,
   },
 
-  { "mfussenegger/nvim-lint" },
+  { "dapt4/vim-autoSurround" },
+
+  { "dense-analysis/ale" },
 }
