@@ -10,8 +10,8 @@ vim.api.nvim_exec([[
     \ 'cpp': ['gcc'],
     \ 'html': ['prettier'],
     \ 'lua': ['luacheck'],
-    \ 'rb': ['rubocop'],
-    \ 'rs': ['rust-analyzer'],
+    \ 'ruby': ['rubocop'],
+    \ 'rust': ['rustfmt'],
     \ 'css': ['prettier'],
     \ 'java': ['google-java-format'],
     \ }
