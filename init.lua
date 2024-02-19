@@ -1,27 +1,14 @@
 -- bootstrap lazy.nvim, LazyVim and plugins
 require("config.lazy")
 
--- selection of which Ale linters will be loaded
-vim.api.nvim_exec([[
-  let g:ale_linters = {
-    \ 'javascript': ['standard'],
-    \ 'python': ['flake8'],
-    \ 'c': ['gcc'],
-    \ 'cpp': ['gcc'],
-    \ 'html': ['prettier'],
-    \ 'lua': ['luacheck'],
-    \ 'ruby': ['rubocop'],
-    \ 'rust': ['rustfmt'],
-    \ 'css': ['prettier'],
-    \ 'java': ['google-java-format'],
-    \ }
-]], false)
-
 -- colorschemes setup
 require("nightfox").setup({
   style = "carbonfox",
 })
 require("onedark").setup({
-  style = "deep",
+  style = "darker",
 })
-require("onenord").load()
+require("catppuccin").setup({
+  style = "mocha",
+})
+require("catppuccin").load()

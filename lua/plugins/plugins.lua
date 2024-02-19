@@ -38,8 +38,5 @@ return {
   },
 
   { "dapt4/vim-autoSurround" },
-
-  { "dense-analysis/ale" },
-
   { "eandrju/cellular-automaton.nvim" },
 }
