@@ -6,17 +6,7 @@ For optimal functioning of all the plugins, you need these installed:
 - G++
 
 # Language support
-This config uses the [Ale](https://github.com/dense-analysis/ale) plugin to get linting features, languages that have linting activated:
-- C++
-- C
-- Ruby
-- Rust
-- Java
-- Javascript
-- Python
-- Lua
-- HTML
-- CSS
+This config uses mason and mason-lspconfig for linting. Configuration of these plugins are in the lsp-config.lua file.
 
 # Installation
 Commands to copy this config to your neovim folder:

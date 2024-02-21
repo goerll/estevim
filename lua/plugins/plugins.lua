@@ -1,16 +1,6 @@
 return {
 
   {
-    "roobert/tailwindcss-colorizer-cmp.nvim",
-    -- optionally, override the default options:
-    config = function()
-      require("tailwindcss-colorizer-cmp").setup({
-        color_square_width = 2,
-      })
-    end,
-  },
-
-  {
     "rest-nvim/rest.nvim",
     dependencies = { { "nvim-lua/plenary.nvim" } },
     config = function()
@@ -23,12 +13,6 @@ return {
   { "ray-x/web-tools.nvim" },
 
   {
-    "mrcjkb/rustaceanvim",
-    version = "^3", -- Recommended
-    ft = { "rust" },
-  },
-
-  {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
@@ -38,5 +22,4 @@ return {
   },
 
   { "dapt4/vim-autoSurround" },
-  { "eandrju/cellular-automaton.nvim" },
 }
