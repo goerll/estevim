@@ -1,7 +1,7 @@
 -- bootstrap lazy.nvim, LazyVim and plugins
 require("config.lazy")
 
-vim.o.guifont = "Maple Mono NF:h14"
+vim.o.guifont = "Maple Mono NF:h12"
 
 -- colorschemes setup
 require("nightfox").setup({
