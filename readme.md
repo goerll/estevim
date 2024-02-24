@@ -37,7 +37,7 @@ chmod u+x nvim.appimage
 mv squashfs-root neovim
 
 # Extract neovide
-chmod u+x neovide.appimage
+chmod u+x neovide.AppImage
 ./neovide.AppImage --appimage-extract
 mv squashfs-root neovide
 
