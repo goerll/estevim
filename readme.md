@@ -49,6 +49,6 @@ git clone https://github.com/goerll/estevim ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
 # Create alias in .bashrc
-echo "alias neovide='./~/Downloads/neovide/usr/bin/neovide --neovim-bin ~/Downloads/neovim/usr/bin/nvim'" >>~/.bashrc
+echo "alias neovide='~/Downloads/neovide/usr/bin/neovide --neovim-bin ~/Downloads/neovim/usr/bin/nvim'" >>~/.bashrc
 ```
 
