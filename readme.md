@@ -28,3 +28,27 @@ git clone https://github.com/goerll/estevim ~/.config/nvim
 # Remove git file
 rm -rf ~/.config/nvim/.git
 ```
+
+Script for my personal use at school computers:
+```bash
+# Extract neovim
+chmod u+x nvim.appimage
+./nvim.appimage --appimage-extract
+mv squashfs-root neovim
+
+# Extract neovide
+chmod u+x neovide.appimage
+./neovide.AppImage --appimage-extract
+mv squashfs-root neovide
+
+# Remove current config
+rm -rf ~/.config/nvim
+
+# Clone mine and remove git file
+git clone https://github.com/goerll/estevim ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+# Create alias in .bashrc
+echo "alias neovide='./~/Downloads/neovide/usr/bin/neovide' --neovim-bin ~/Downloads/neovim/usr/bin/nvim" >>~/.bashrc
+```
+
