@@ -1,8 +1,16 @@
 return {
-  { "navarasu/onedark.nvim" },
-  { "edeneast/nightfox.nvim" },
-  { "xiyaowong/transparent.nvim" },
-  { "alexvzyl/nordic.nvim" },
-  {"catppuccin/nvim"},
-  { "rose-pine/neovim", name = "rose-pine" },
+  {"navarasu/onedark.nvim", style = "deep"},
+  {"tiagovla/tokyodark.nvim"},
+  {"shaunsingh/moonlight.nvim"},
+  {"nyoom-engineering/oxocarbon.nvim"},
+  {"marko-cerovac/material.nvim", style = "deep ocean"},
+  {"projekt0n/github-nvim-theme"},
+  {"folke/tokyonight.nvim", style = "night"},
+  {"xiyaowong/transparent.nvim"},
+  {"shrikecode/kyotonight.vim"},
+
+  -- Warm Green-ish Themes
+  {"xero/miasma.nvim"},
+  {"comfysage/evergarden"},
+
 }

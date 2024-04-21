@@ -1,16 +1,11 @@
 -- bootstrap lazy.nvim, LazyVim and plugins
 require("config.lazy")
 
-vim.o.guifont = "Maple Mono NF:h12"
+if vim.g.neovide then
+  -- vim.o.guifont = "Maple Mono NF"
+  vim.o.guifont = "GeistMono Nerd Font Mono"
+  vim.g.neovide_transparency = 0.9
+end
+require("scrollbar").setup()
 
--- colorschemes setup
-require("nightfox").setup({
-  style = "carbonfox",
-})
-require("onedark").setup({
-  style = "darker",
-})
-require("catppuccin").setup({
-  style = "mocha",
-})
-require("tokyonight").load()
+vim.cmd("colorscheme material-deep-ocean")
