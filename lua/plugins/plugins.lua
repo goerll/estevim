@@ -14,11 +14,13 @@ return {
       require("rest-nvim").setup()
     end,
   },
-
-
+  {"Domeee/mosel.nvim"},
+  {"kaarmu/typst.vim"},
   { "petertriho/nvim-scrollbar" },
 
   { "ray-x/web-tools.nvim" },
+
+  {"akinsho/git-conflict.nvim"},
 
   {
     "iamcco/markdown-preview.nvim",

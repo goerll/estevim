@@ -33,12 +33,12 @@ Script for my personal use at school computers:
 ```bash
 # Extract neovim
 chmod u+x nvim.appimage
-./nvim.appimage --appimage-extract
+~/Downloads/nvim.appimage --appimage-extract
 mv squashfs-root neovim
 
 # Extract neovide
 chmod u+x neovide.AppImage
-./neovide.AppImage --appimage-extract
+~/Downloads/neovide.AppImage --appimage-extract
 mv squashfs-root neovide
 
 # Remove current config

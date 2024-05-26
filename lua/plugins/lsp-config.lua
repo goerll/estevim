@@ -19,6 +19,7 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
+      lspconfig.gopls.setup({})
       lspconfig.clangd.setup({})
       lspconfig.cssls.setup({})
       lspconfig.html.setup({})

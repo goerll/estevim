@@ -8,7 +8,8 @@ return {
   {"folke/tokyonight.nvim", style = "night"},
   {"xiyaowong/transparent.nvim"},
   {"shrikecode/kyotonight.vim"},
-
+  {"scottmckendry/cyberdream.nvim"},
+  {"diegoulloao/neofusion.nvim"},
   -- Warm Green-ish Themes
   {"xero/miasma.nvim"},
   {"comfysage/evergarden"},
