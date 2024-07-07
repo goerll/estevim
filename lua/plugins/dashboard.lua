@@ -18,7 +18,7 @@
 local logo = [[
   /\_/\  
  ( •-• ) 
- / >🎸 > 
+ / >🎸<\ 
  @goerll 
 ]]
 
@@ -32,7 +32,7 @@ return {
     local logo_lines = vim.split(logo, "\n")
     local logo_height = #logo_lines
 
-    local padding = math.floor((vim.api.nvim_win_get_height(0) - 13 - logo_height) / 2)
+    local padding = math.floor((vim.api.nvim_win_get_height(0) - 14 - logo_height) / 2)
     logo = string.rep("\n", padding) .. logo
     local opts = {
       theme = "doom",

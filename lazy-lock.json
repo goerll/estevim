@@ -36,5 +36,6 @@
   "transparent.nvim": { "branch": "main", "commit": "fd35a46f4b7c1b244249266bdcb2da3814f01724" },
   "vim-autoSurround": { "branch": "main", "commit": "36071029ee7a7b0406444c2cb919ff41bd1a007d" },
   "vim-move": { "branch": "master", "commit": "3c4195de0748da9bba25c54d78d959d349e93c55" },
-  "which-key.nvim": { "branch": "main", "commit": "af4ded85542d40e190014c732fa051bdbf88be3d" }
+  "which-key.nvim": { "branch": "main", "commit": "af4ded85542d40e190014c732fa051bdbf88be3d" },
+  "zen-mode.nvim": { "branch": "main", "commit": "c2eb08503c6a0e69106fc75f81348a427e501359" }
 }
