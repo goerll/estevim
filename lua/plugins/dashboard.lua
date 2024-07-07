@@ -1,9 +1,4 @@
-return{
-  "nvimdev/dashboard-nvim",
-  event = "VimEnter",
-  opts = function()
-
---     local logo = [[
+-- local logo = [[
 --         ▄▄▄▄▄                  
 --         █ ▄▄▄▀█▄     ▄▄▀▀▀▀█   
 --         █▐▓▓░█▄▀█▄▄▄█▀▄▓▓▓▌█   
@@ -18,59 +13,52 @@ return{
 -- ▐▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌
 --  █▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█ 
 --  ▝▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀  
---     ]]
---
---     local logo = [[
---   ／l、     
--- （ﾟ､ ｡ ７   
---   l  ~ヽ    
---   じしf_,)ノ
---     ]]
---
---     local logo = [[
---                  (\__/)                      
---                  (•ㅅ•)      Don’t talk to   
---               ＿ノヽ ノ＼＿      me or my son
---            `/　`/ ⌒Ｙ⌒ Ｙ  ヽ     ever again.
---           ( 　(三ヽ人　 /　  |               
---           |　ﾉ⌒＼ ￣￣ヽ   ノ                
---            ヽ＿＿＿＞､＿_／                  
---                 ｜( 王 ﾉ〈     (\__/)         
---                 /ﾐ`ー―彡 \     (•ㅅ•)         
---                / ╰    ╯    \   /    \>       
---     ]]
+--  ]]
 
-    local logo = [[
-    {\__/}  
-    ( •-•)  
-    / >🎸>  
-    ]]
+local logo = [[
+  /\_/\  
+ ( •-• ) 
+ / >🎸 > 
+ @goerll 
+]]
 
-    logo = string.rep("\n", 8) .. logo .. "\n\n"
+return {
+  "nvimdev/dashboard-nvim",
+  event = "VimEnter",
 
+  opts = function()
+
+
+    local logo_lines = vim.split(logo, "\n")
+    local logo_height = #logo_lines
+
+    local padding = math.floor((vim.api.nvim_win_get_height(0) - 13 - logo_height) / 2)
+    logo = string.rep("\n", padding) .. logo
     local opts = {
       theme = "doom",
+
       hide = {
-        -- this is taken care of by lualine
-        -- enabling this messes up the actual laststatus setting after loading a file
         statusline = false,
       },
+
       config = {
         header = vim.split(logo, "\n"),
         -- stylua: ignore
+        --
         center = {
           { action = "Telescope find_files",                                     desc = " Find file",       icon = " ", key = "f" },
           { action = "ene | startinsert",                                        desc = " New file",        icon = " ", key = "n" },
           { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
           { action = "Telescope live_grep",                                      desc = " Find text",       icon = " ", key = "g" },
-          { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
+          { action = "lua require('telescope.builtin').find_files({cwd = vim.fn.stdpath('config')})", desc = " Config",          icon = " ", key = "c" },
           { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
           { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
         },
+
         footer = function()
           local stats = require("lazy").stats()
           local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-          return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
+          return { "⚡ " .. stats.loaded .. "/" .. stats.count .. " - " .. ms .. "ms" }
         end,
       },
     }
@@ -94,4 +82,3 @@ return{
     return opts
   end,
 }
-
