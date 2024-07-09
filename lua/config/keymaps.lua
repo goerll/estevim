@@ -4,20 +4,16 @@ local map = vim.keymap.set
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- neo-tree
-map("n", "<leader>e", ":Neotree toggle<CR>", {noremap = true, silent = true})
-map("n", "<leader>o", ":Neotree focus<CR>", {noremap = true, silent = true})
-
 -- Clipboard configuration
 -- Yank into system clipboard
-map({'n', 'v'}, 'y', '"+y')
-map({'n', 'v'}, 'y', '"+Y')
+map({'n', 'v', 'x'}, 'y', '"+y')
+map({'n', 'v', 'x'}, 'y', '"+Y')
 -- Delete into system clipboard (only when using x/X)
-map({'n', 'v'}, 'x', '"+d')
-map({'n', 'v'}, 'X', '"+D')
+map({'n', 'v', 'x'}, 'x', '"+d')
+map({'n', 'v', 'x'}, 'X', '"+D')
 -- Paste from system clipboard
-map('n', 'p', '"+p')
-map('n', 'P', '"+P')
+map({'n', 'v', 'x'}, 'p', '"+p')
+map({'n', 'v', 'x'}, 'P', '"+P')
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
@@ -44,7 +40,7 @@ map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 map("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
-map("n", "<leader>bd", "<cmd>:bd #<cr>", { desc = "Delete Buffer" })
+map("n", "<leader>bd", function() vim.cmd("bd") end, { desc = "Delete Buffer" })
 map("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
 
 -- Clear search with <esc>
@@ -60,10 +56,3 @@ map("n", "<leader>w-", "<C-W>s", { desc = "Split Window Below", remap = true })
 map("n", "<leader>w|", "<C-W>v", { desc = "Split Window Right", remap = true })
 map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
-
--- Tab configuration
-vim.opt.tabstop = 4 -- TAB looks like 4 spaces
-vim.opt.expandtab = true -- TAB key inserts spaces instead of TAB
-vim.opt.softtabstop = 4 -- 4 spaces inserted instead of TAB
-vim.opt.shiftwidth = 4 -- 4 spaces when indenting
-vim.opt.shiftround = true -- Indent rounds to shift width
