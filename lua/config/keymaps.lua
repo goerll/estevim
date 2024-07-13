@@ -56,3 +56,11 @@ map("n", "<leader>w-", "<C-W>s", { desc = "Split Window Below", remap = true })
 map("n", "<leader>w|", "<C-W>v", { desc = "Split Window Right", remap = true })
 map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
+
+-- Indent lines in visual mode and keep the selection
+vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true, desc = "Indent left and reselect" })
+vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true, desc = "Indent right and reselect" })
+
+-- Indent lines in visual line mode and keep the selection
+vim.api.nvim_set_keymap('x', '<', '<gv', { noremap = true, silent = true, desc = "Indent left and reselect" })
+vim.api.nvim_set_keymap('x', '>', '>gv', { noremap = true, silent = true, desc = "Indent right and reselect" })

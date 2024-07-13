@@ -1,16 +1,16 @@
 return {
-  {
-    "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end
-  },
+    {
+        "williamboman/mason.nvim",
+        config = function()
+        require("mason").setup()
+        end
+    },
 
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "jdtls", "quick_lint_js", "rust_analyzer"}
+        ensure_installed = { "lua_ls", "clangd", "jdtls", "quick_lint_js", "rust_analyzer", "csharp_ls" },
       })
     end
   },
@@ -28,6 +28,7 @@ return {
       lspconfig.quick_lint_js.setup({})
       lspconfig.pyright.setup({})
       lspconfig.rust_analyzer.setup({})
+      lspconfig.csharp_ls.setup({})
     end
   },
 }

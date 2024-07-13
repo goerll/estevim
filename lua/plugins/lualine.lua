@@ -18,9 +18,10 @@ return {
         }
     },
     sections = {
-        lualine_a = {},
-        lualine_b = {"mode", { "branch", icon = "" }},
+        lualine_a = {"mode"},
+        lualine_b = {},
         lualine_c = {
+                        { "branch", icon = "" },
                         {
                         "diagnostics",
                         symbols = {
@@ -33,15 +34,19 @@ return {
                     { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
                     { "filename", padding = { left = 0, right = 0 } },
         },
-        lualine_x = {'progress'},
-        lualine_y = {
+
+        lualine_x = {
+            'progress',
             'location',
+        },
+        lualine_y = {
+        },
+        lualine_z = {
             {
                 "datetime",
                 style = " %R",
             },
         },
-        lualine_z = {},
     },
     inactive_sections = {
         lualine_a = {},
